@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% extends "master.html" %}
+
+    {% block title %}
+    Chatterbox
+    {% endblock %}
+
+</head>
+<body>
+
+{% block content %}
+<h1> Users</h1>
+
+<p> Welcome to Chatterbox</p>
+<ul>
+    {% for x in myusers %}
+    <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+</body>
+</html>
