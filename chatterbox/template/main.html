@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    {% extends "master.html" %}
+   {% extends "master.html" %}
 
     {% block title %}
     Chatterbox
@@ -13,19 +12,15 @@
 <body>
 
 {% block content %}
-
-<p> <a href = "/">Home</a></p>
-<h1> Users</h1>
+<h1> Chatterbox </h1>
 
 <p> Welcome to Chatterbox</p>
 
-<ul>
-    {% for x in myusers %}
-    <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
-    {% endfor %}
-</ul>
+<h3>Users</h3>
+<p> Check out all our users <a href = "chatapp/">Users</a></p>
 
 {% endblock %}
 
 </body>
+
 </html>

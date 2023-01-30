@@ -5,7 +5,7 @@ from .models import AppUser
 
 
 def chatter(request):
-    myusers = AppUser.objects.all()
+    myusers = AppUser.objects.all().values()
     context: {
         'myusers': myusers,
     }
@@ -17,3 +17,6 @@ def details(request,id):
         'myusers': myusers,
     }
     return render(request,'details.html', {'myusers': myusers })
+
+def main(request):
+    return render(request, 'main.html')
