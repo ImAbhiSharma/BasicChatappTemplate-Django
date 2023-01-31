@@ -12,6 +12,7 @@
 <body>
 
 {% block content %}
+<div class="mycard">
 <h1>Users</h1>
 
 <h1>{{ myusers.firstname }} {{ myusers.lastname }}</h1>
@@ -20,6 +21,7 @@
 <p>Last Seen: {{ myusers.last_seen }}</p>
 
 <hr>
+</div>
 
 {% endblock %}
 
