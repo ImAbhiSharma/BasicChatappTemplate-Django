@@ -6,17 +6,15 @@ from .models import AppUser
 
 def chatter(request):
     myusers = AppUser.objects.all().values()
-    context: {
-        'myusers': myusers,
-    }
-    return render(request,'chatter.html', {'myusers': myusers })
+    context = {'myusers': myusers}
+    return render(request, 'chatter.html', context)
 
-def details(request,id):
+
+def details(request, id):
     myusers = AppUser.objects.get(id=id)
-    context: {
-        'myusers': myusers,
-    }
-    return render(request,'details.html', {'myusers': myusers })
+    context = {'myusers': myusers}
+    return render(request, 'details.html', context)
+
 
 def main(request):
     return render(request, 'main.html')
